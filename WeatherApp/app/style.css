@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: #222;
+}
+
+.card{
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 50px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 20px;
+}
+
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.search button img{
+    width: 20px;
+}
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+
+}
+.weather h1{    
+    font-size: 70px;
+    font-weight: 500;
+
+}
+.weather h2{    
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-top: 50px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 14px;
+}
+
+.humidity,.wind{
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+
+.weather{
+    display: none;
+}
+
+.error{
+    display: none;
+    margin-top: 18px;
+    transform: translate(-10%);
+    font-size: 20px;
+}
+
+
+
+/* {"coord":{"lon":13.4105,"lat":52.5244},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":
+"stations","main":{"temp":293.76,"feels_like":293.23,"temp_min":292.64,"temp_max":294.81,"pressure":1002,"humidity":52},"visibility":
+10000,"wind":{"speed":3.6,"deg":310},"clouds":{"all":0},"dt":1688495144,"sys":{"type":2,"id":2011538,"country":"DE","sunrise":1688438973,
+"sunset":1688499089},"timezone":7200,"id":2950159,"name":"Berlin","cod":200} */
