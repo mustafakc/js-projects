@@ -1,0 +1,694 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.main-box {
+    /* background-color: yellow; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    /* background-color: blue; */
+    align-items: center;
+    height: 50px;
+    padding-left: 10px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+/*  HEADER LEFT */
+
+.logo {
+    width: 250px;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.findWorkBtn {
+    color: green !important;
+}
+
+.btn:hover {
+    color: rgb(86, 171, 86) !important;
+}
+
+/* HEADER RİGHT */
+
+.header-right {
+    margin-left: 25%;
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.search {
+    /* background-color: purple; */
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.566);
+    width: 400px;
+
+}
+
+
+.search input {
+    border: 0;
+    border-right: 1px solid gray;
+    outline: 0;
+    font-size: 16px;
+    padding-left: 10px;
+    width: 240px;
+    /* background-color: pink; */
+}
+
+.search i {
+    cursor: pointer;
+    font-size: 24px;
+    transition: all .73s;
+    /* background-color: orange; */
+
+}
+
+.search i:hover {
+    color: green;
+    transform: rotate(360deg);
+
+}
+
+.jobs-dropdown {
+    margin-left: 20px;
+}
+
+.question a,
+.contract a,
+.bell a {
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    transition: transform .62s;
+    /* background-color: red; */
+
+}
+
+.question a:hover,
+.contract a:hover,
+.bell a:hover {
+    transform: scale(1.1);
+
+}
+
+.header-profile {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+
+.header-profile img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform .55s;
+
+}
+
+.header-profile img:hover {
+    transform: scale(1.1);
+
+}
+
+/* MAİN @@@@@@@@@@@@@ @@@@@@@@@@@ @@@@@@@@@@@@@@ @@@@@@@@@@@@@@@ */
+
+.main {
+    /* background-color: yellow; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 30px;
+    padding: 10px 0px 10px 80px;
+    /* align-items: center; */
+}
+
+.firstLine {
+    /* background-color: red; */
+    display: flex;
+    width: 55%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+
+
+.mySlider {
+    background-color: #1F57C3;
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 16px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    padding-left: 80px;
+    padding-right: 40px;
+
+}
+
+#learnMore {
+    width: 120px;
+    height: 35px;
+    outline: none;
+    text-align: center;
+    border-radius: 30px;
+    color: green;
+    border: 2px solid green;
+    transition: transform .71s;
+    position: absolute;
+    left: 100px;
+}
+
+#learnMore:hover {
+    transform: scale(1.1);
+}
+
+.main-search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    /* background-color: purple; */
+    margin-top: 20px;
+
+}
+
+.main-search input {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.main-search i {
+    font-size: 16px;
+    background-color: rgb(47, 161, 47);
+    color: rgb(210, 242, 210);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+
+}
+
+/* Jobs List */
+
+.jobContainer {
+    display: block;
+    text-align: start;
+    /* background-color: peru; */
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.411);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.jobContainer h3 {
+    font-size: 24px;
+    margin-left: 30px;
+    margin-top: 30px;
+
+}
+
+.filterJobs {
+    width: 100%;
+    /* background-color: orange; */
+    margin-top: 30px;
+    margin-bottom: -10px;
+
+}
+
+.filterJobs ul {
+    display: flex;
+
+}
+
+.filterJobs ul li {
+    list-style-type: none;
+    margin-left: 16px;
+
+}
+
+.filterJobs ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 0px 10px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+
+
+}
+
+.filterJobs ul li a:focus {
+    border-bottom: 3px solid black;
+}
+
+.browse-line {
+    margin-left: 30px;
+}
+
+
+.jobListItem {
+    width: 100%;
+    /* background-color: pink; */
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.jobListItem:hover {
+    background-color: rgba(203, 187, 187, 0.139);
+}
+
+.jobListItem div {
+    height: 80px;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jobListItem div a {
+
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.jobListItem div a:hover {
+    color: green;
+    text-decoration: underline green;
+}
+
+.jobListItem div div {
+    width: 120px;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.jobListItem div div button {
+    margin-left: 5px;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    outline: 0;
+    border: 0;
+    color: green;
+    transition: .5s all ease;
+    border: 1px solid green;
+
+}
+
+.jobListItem div div button:hover {
+    background-color: rgba(128, 128, 128, 0.123);
+
+}
+
+
+.jobListItem small {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.jobListItem p {
+
+    margin-left: 20px;
+}
+
+.jobListItem button {
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    background-color: rgba(201, 201, 201, 0.276);
+}
+
+.jobListItem div div button {
+    background-color: white;
+}
+
+/* SECOND LİNE (right side of site) */
+
+/* miniProfile  */
+.secondLine {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    /* background-color: orange; */
+    align-items: center;
+
+}
+
+.miniProfile {
+    /* background-color: aquamarine; */
+    width: 70%;
+    height: 240px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.611);
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+
+.profilePhoto {
+    background-color: orange;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+}
+
+.profilePhoto img {
+    background-color: orange;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+}
+
+.miniProfile a {
+    /* background-color: aquamarine; */
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.miniProfile-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.completeYourProfile {
+    display: inline-block;
+    text-decoration: none;
+    /* background-color: red; */
+    width: 100%;
+    height: 30px;
+}
+
+.completeYourProfile p {
+    color: green;
+
+}
+
+.completeYourProfile p:hover {
+    text-decoration: underline rgb(86, 171, 86);
+
+}
+
+.completeLevel {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.completeLevel div {
+    width: 80%;
+    height: 6px;
+    background-color: rgba(162, 162, 162, 0.489);
+    border-radius: 5px;
+
+}
+
+.completeLevel div div {
+    width: 40%;
+    height: 6px;
+    background-color: green;
+    border-radius: 5px;
+
+}
+
+.completeLevel span {
+    margin: 0px 10px;
+
+}
+
+/* Promote Profil  */
+.promoteContainer {
+    /* background-color: red; */
+    width: 70%;
+    height: 310px;
+    border-radius: 10px;
+    border: 1px solid rgba(178, 177, 177, 0.447);
+    padding: 10px;
+
+}
+
+#promoteBtn {
+    width: 240px;
+    letter-spacing: .6px;
+    /* border-bottom: .5px solid rgba(178, 177, 177, 0.447); */
+    outline: none;
+    margin-right: 10px;
+    margin-bottom: -10px;
+    transition: all .51s;
+}
+
+
+.dropdown-menu li:hover {
+    background-color: white;
+}
+
+.promoteItem {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.dropdown button:focus {
+    border: none;
+}
+
+.promoteItem div {
+
+    /* background-color: purple; */
+    width: 100%;
+}
+
+.promoteItem a {
+    display: inline-block;
+    text-decoration: none;
+    color: green;
+
+}
+
+.promoteItem a i {
+    background-color: white;
+    color: green;
+
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    border: 1px solid rgba(178, 177, 177, 0.447);
+}
+
+.promoteItem a i:hover {
+    background-color: rgba(206, 203, 203, 0.184);
+}
+
+/* UPWORK ACADEMY  */
+
+.academy {
+    width: 70%;
+    height: 240px;
+    /* background-color: red; */
+    margin-top: 50px;
+    border-radius: 10px;
+    padding-top: 20px;
+    border: 1px solid rgba(151, 142, 142, 0.299);
+    display: flex;
+    align-items: center;
+}
+
+.academy ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.academy ul li a {
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+
+
+}
+
+footer {
+    width: 95%;
+    height: 400px;
+    background-color: black;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-top {
+    width: 80%;
+    height: 75%;
+    /* background-color: orange; */
+    border-bottom: 2px solid white;
+    margin-left: 60px;
+    padding-left: 50px;
+}
+
+footer .footer-top ul {
+    display: flex;
+    /* background-color: red; */
+    margin-top: 30px;
+    height: 170px;
+
+}
+
+footer .footer-top ul li {
+    list-style-type: none;
+    margin-right: 150px;
+    margin-left: -32px;
+    /* background-color: yellow; */
+    height: 160px;
+}
+
+footer .footer-top ul li div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+
+}
+
+footer .footer-top ul li div a {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+
+
+.follow {
+    display: flex;
+    width: 30%;
+    height: 100px;
+    /* background-color: purple; */
+    color: white;
+
+}
+
+.follow p {
+    display: inline-block;
+    /* background-color: aquamarine; */
+    width: 30%;
+    height: 30px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.follow div {
+    width: 70%;
+    height: 30px;
+    /* background-color: rgb(86, 73, 47); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.follow div a {
+    text-decoration: none;
+    color: white;
+
+
+}
+
+.follow div a i {
+    font-size: 22px;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+
+}
+
+.follow div a i:hover {
+    background-color: gray;
+    transition: all .4s;
+}
+
+.copyright {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upwork Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/996312ac76.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-box">
+        <header>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 28" role="img" aria-hidden="true">
+                    <path fill="#14a800"
+                        d="M28.18,19.06A6.54,6.54,0,0,1,23,16c.67-5.34,2.62-7,5.2-7s4.54,2,4.54,5-2,5-4.54,5m0-13.34a7.77,7.77,0,0,0-7.9,6.08,26,26,0,0,1-1.93-5.62H12v7.9c0,2.87-1.3,5-3.85,5s-4-2.12-4-5l0-7.9H.49v7.9A8.61,8.61,0,0,0,2.6,20a7.27,7.27,0,0,0,5.54,2.35c4.41,0,7.5-3.39,7.5-8.24V8.77a25.87,25.87,0,0,0,3.66,8.05L17.34,28h3.72l1.29-7.92a11,11,0,0,0,1.36,1,8.32,8.32,0,0,0,4.14,1.28h.34A8.1,8.1,0,0,0,36.37,14a8.12,8.12,0,0,0-8.19-8.31">
+                    </path>
+                    <path fill="#14a800"
+                        d="M80.8,7.86V6.18H77.2V21.81h3.65V15.69c0-3.77.34-6.48,5.4-6.13V6c-2.36-.18-4.2.31-5.45,1.87">
+                    </path>
+                    <polygon fill="#14a800"
+                        points="55.51 6.17 52.87 17.11 50.05 6.17 45.41 6.17 42.59 17.11 39.95 6.17 36.26 6.17 40.31 21.82 44.69 21.82 47.73 10.71 50.74 21.82 55.12 21.82 59.4 6.17 55.51 6.17">
+                    </polygon>
+                    <path fill="#14a800"
+                        d="M67.42,19.07c-2.59,0-4.53-2.05-4.53-5s2-5,4.53-5S72,11,72,14s-2,5-4.54,5m0-13.35A8.1,8.1,0,0,0,59.25,14,8.18,8.18,0,1,0,75.6,14a8.11,8.11,0,0,0-8.18-8.31">
+                    </path>
+                    <path fill="#14a800"
+                        d="M91.47,14.13h.84l5.09,7.69h4.11l-5.85-8.53a7.66,7.66,0,0,0,4.74-7.11H96.77c0,3.37-2.66,4.65-5.3,4.65V0H87.82V21.82h3.64Z">
+                    </path>
+                </svg>
+
+            </div>
+            <!-- Find Work  -->
+            <div class="btn-group">
+                <button type="button" class="btn dropdown-toggle findWorkBtn" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Find Work
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Find Work</a></li>
+                    <li><a class="dropdown-item" href="#">Saved Jobs</a></li>
+                    <li><a class="dropdown-item" href="#">Proposals</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">My stats</a></li>
+                    <li><a class="dropdown-item" href="#">My Project Dashboard</a></li>
+                </ul>
+            </div>
+
+            <!-- My Jobs  -->
+            <div class="btn-group">
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    My Jobs
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">My Jobs</a></li>
+                    <li><a class="dropdown-item" href="#">All Contracts</a></li>
+                    <li><a class="dropdown-item" href="#">Work Diary</a></li>
+
+                </ul>
+            </div>
+            <!-- Reports  -->
+            <div class="btn-group">
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Reports
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Overview</a></li>
+                    <li><a class="dropdown-item" href="#">My Reports</a></li>
+                    <li><a class="dropdown-item" href="#">Billings & Earnings</a></li>
+                    <li><a class="dropdown-item" href="#">Connects History</a></li>
+                    <li><a class="dropdown-item" href="#">Transaction History</a></li>
+                    <li><a class="dropdown-item" href="#">Certificate of Earnings</a></li>
+                </ul>
+            </div>
+            <!-- Messages -->
+            <div class="btn-group">
+                <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    Messages
+                </button>
+            </div>
+
+            <!-- header right -->
+            <div class="header-right">
+                <!-- search  -->
+                <div class="search">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" placeholder="Search">
+                    </div>
+                    <!-- jobs -->
+                    <div class="jobs-dropdown">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Jobs
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">
+                                        <h6>Jobs</h6>
+                                        <small>Apply to jobs posted by clients</small>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <h6>Talent</h6>
+                                        <small>Find freelancers and agencies</small>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <h6>Projects</h6>
+                                        <small>See projects from other pros</small>
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- ' ? ' sign -->
+                <div class="question">
+                    <a href="#"><i class="fa-solid fa-question"></i></a>
+                </div>
+                <!-- direct contract -->
+                <div class="contract">
+                    <a href="#"> <i class="fa-regular fa-paper-plane"></i></a>
+                </div>
+                <div class="bell">
+                    <a href="#"><i class="fa-regular fa-bell"></i></a>
+                </div>
+                <div class="header-profile">
+                    <a href="#">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwlbw1AO4cQdiHOhFtnW4gImInssn4UpjKHQ&usqp=CAU"
+                            alt="">
+
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAİN  -->
+        <main class="main">
+            <!-- first line  -->
+            <div class="firstLine">
+                <!-- slider -->
+                <div id="carouselExampleIndicators" class="carousel slide mySlider">
+                    <!-- birinci div / -->
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <!-- birinci div / -->
+
+                    <!-- ikinci div  -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h3>Get 80 connects each month</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minima tempora omnis,
+                                autem quia deserunt molestiae doloremque magni ab dolorem!</p>
+                            <button id="learnMore"type="button">Learn More</button>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>merhaba</h2>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>naber</h3>
+                        </div>
+                    </div>
+                    <!-- ikinci div  / -->
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- slider / -->
+                <!-- main search -->
+                <div class="main-search">
+                    <input type="search" name="" id="" placeholder="Search for job">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+
+                </div>
+                <!-- main search end -->
+                <!-- Jobs List  -->
+                <div class="jobContainer">
+                    <h3>Jobs you might like </h3>
+                    <div class="filterJobs">
+                        <ul>
+                            <li><a href="#"> Best Matches </a></li>
+                            <li><a href="#"> Most Recent</a></li>
+                            <li><a href="#"> Saved Jobs (0) </a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <p class="browse-line">Browse jobs that match your experience to a client's hiring preferences.
+                        Ordered by most
+                        relevant.</p>
+
+                    <!-- JOBS -->
+
+                    <!-- First Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">I need a freelancer with google play console.</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $12 - Posted 24 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, fugit. Culpa praesentium
+                            cum magnam! Cum magnam voluptate ipsum ipsa consequatur?</p>
+                        <button type="button">HTML 5</button>
+                        <button type="button">CSS3</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+                    <!-- First Job  End -->
+
+                    <!-- Second Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">Create React app from Figma</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $50 - Posted 57 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, pariatur!</p>
+                        <button type="button">Bootstrap</button>
+                        <button type="button">React</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+
+                    <!-- Second Job  End-->
+                    <!-- Second Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">Create React app from Figma</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $50 - Posted 57 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, pariatur!</p>
+                        <button type="button">Bootstrap</button>
+                        <button type="button">React</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+
+                    <!-- Second Job  End-->
+                    <!-- Second Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">Create React app from Figma</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $50 - Posted 57 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, pariatur!</p>
+                        <button type="button">Bootstrap</button>
+                        <button type="button">React</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+
+                    <!-- Second Job  End-->
+                    <!-- Second Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">Create React app from Figma</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $50 - Posted 57 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, pariatur!</p>
+                        <button type="button">Bootstrap</button>
+                        <button type="button">React</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+
+                    <!-- Second Job  End-->
+                    <!-- Second Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">Create React app from Figma</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $50 - Posted 57 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, pariatur!</p>
+                        <button type="button">Bootstrap</button>
+                        <button type="button">React</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+
+                    <!-- Second Job  End-->
+                    <!-- Second Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">Create React app from Figma</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $50 - Posted 57 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, pariatur!</p>
+                        <button type="button">Bootstrap</button>
+                        <button type="button">React</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+
+                    <!-- Second Job  End-->
+                    <!-- Second Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">Create React app from Figma</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $50 - Posted 57 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, pariatur!</p>
+                        <button type="button">Bootstrap</button>
+                        <button type="button">React</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+
+                    <!-- Second Job  End-->
+                    <!-- Second Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">Create React app from Figma</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $50 - Posted 57 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, pariatur!</p>
+                        <button type="button">Bootstrap</button>
+                        <button type="button">React</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+
+                    <!-- Second Job  End-->
+                    <!-- Second Job -->
+                    <div class="jobListItem">
+                        <div>
+                            <a href="#">Create React app from Figma</a>
+                            <div>
+                                <button> <i class="fa-regular fa-thumbs-down"></i> </button>
+                                <button> <i class="fa-regular fa-heart"></i> </button><br>
+                            </div>
+
+                        </div>
+                        <small>Fixed-price Entry level - Est. Budget : $50 - Posted 57 minutes ago</small>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, pariatur!</p>
+                        <button type="button">Bootstrap</button>
+                        <button type="button">React</button>
+                        <button type="button">Javascript</button>
+
+                    </div>
+                    <hr>
+
+                    <!-- Second Job  End-->
+
+                    <!-- JOBS END -->
+
+                </div>
+
+                <!-- Jobs List  end-->
+
+            </div>
+            <!-- first line end -->
+
+            <!-- second line  -->
+            <div class="secondLine">
+                <!-- mini profile  -->
+                <div class="miniProfile">
+                    <img class="profilePhoto"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwlbw1AO4cQdiHOhFtnW4gImInssn4UpjKHQ&usqp=CAU">
+
+                    <a href=" #" class="miniProfile-name"> Mustafa K. </a>
+
+                    <p>Web Developer</p>
+
+                    <a href="#" class="completeYourProfile">
+                        <p>Complete your profile</p>
+                    </a>
+
+                    <div class="completeLevel">
+                        <div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <span>40%</span>
+                    </div>
+
+                </div>
+                <!-- mini profile end -->
+                <!-- promote profile -->
+                <div class="promoteContainer">
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="promoteBtn" data-bs-toggle="dropdown">
+                            Promote Your Profile
+
+                        </button>
+                        <hr>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Availability badge</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Boost Your Profile</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Connects -->
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="promoteBtn" data-bs-toggle="dropdown">
+                            Connects
+                        </button>
+                        <hr>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Availability badge</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Boost Your Profile</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Preferences -->
+
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="promoteBtn" data-bs-toggle="dropdown">
+                            Preferences
+                        </button>
+                        <hr>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Availability badge</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Boost Your Profile</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- preferences end -->
+                    <!-- Preferences -->
+
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="promoteBtn" data-bs-toggle="dropdown">
+                            Proposals
+                        </button>
+                        <hr>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Availability badge</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Boost Your Profile</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- preferences end --> <!-- Preferences -->
+
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="promoteBtn" data-bs-toggle="dropdown">
+                            Project Catalog
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Availability badge</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                                <div class="promoteItem">
+                                    <div>
+                                        <p>Boost Your Profile</p>
+                                        <small>Off</small>
+                                    </div>
+                                    <a href="#">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- preferences end -->
+                </div>
+                <!-- promote profil end -->
+                <div class="academy">
+                    <ul>
+                        <li><a href="#">Upwork Academy</a></li>
+                        <li><a href="#">Direct Contracts</a></li>
+                        <li><a href="#">Get Paid</a></li>
+                        <li><a href="#">Community & Forums</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- second line end -->
+        </main>
+        <!-- main end -->
+        <!-- FOOTER  -->
+        <footer>
+            <!-- footer top  -->
+            <div class="footer-top">
+                <ul>
+                    <li>
+                        <div>
+                            <a href="#">About Us</a>
+                            <a href="#">Feedback</a>
+                            <a href="#">Community</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#">Trust, Safety & Security</a>
+                            <a href="#">Help & Support</a>
+                            <a href="#">Upwork Foundation</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">CA Notice at Collection</a>
+                            <a href="#">Cookie Settings</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#">Accessibilty</a>
+                            <a href="#">Desktop App</a>
+                            <a href="#">Cookie Policy</a>
+                            <a href="#">Enterprise Solutions </a>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="follow">
+                    <p>Follow Us</p>
+                    <div>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">© 2015-2023 Upwork® Global Inc.</p>
+
+            </div>
+            <!-- footer top end  -->
+
+        </footer>
+        <!-- FOOTER  END -->
+
+
+
+
+    </div>
+</body>
+
+</html>
