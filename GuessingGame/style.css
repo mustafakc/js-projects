@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(132, 31, 132), rgb(243, 126, 243));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 40%;
+    height: 65vh;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.firstTitle,
+.secondTitle {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input {
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    outline: none;
+    text-align: center;
+    font-size: 24px;
+}
+
+.input::placeholder {
+    font-size: 24px;
+}
+
+.guessBtn {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(225, 75, 225);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.guessSituation, .guessNo, .guessedNumbers {
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+.win {
+    width: 350px;
+    height: 350px;
+    background-color: rgba(180, 7, 180, 0.917);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 23;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.reset {
+    width: 150px;
+    height: 70px;
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color:rgba(180, 7, 180, 0.783);
+    font-size: 18px;
+    margin-top: 30px;
+}
+.correct{
+    margin-top: 20px;
+}
+.ready{
+    font-size: 30px;
+    margin-top: 50px;
+}
